@@ -1,0 +1,59 @@
+
+<!-- This is a simple html page demonstrating adding a map to a page -->
+<!doctype html>
+<html lang="en">
+  <head>
+    
+    <!-- The style sheet here has some of the map styling for zooming buttons, etc. -->
+    <link rel="stylesheet" href="http://openlayers.org/en/v3.2.1/css/ol.css" type="text/css">
+    
+    <!-- This extra bit of style defines the size of the "map" div tag area that shows up later -->
+    <style>
+      .map {
+        height: 400px;
+        width: 100%;
+      }
+    </style>
+    
+    <!-- Here we link to the copy of the OpenLayers JavaScript source file that is on the openlayers.org site. -->
+    <script src="http://openlayers.org/en/v3.2.1/build/ol.js" type="text/javascript"></script>
+    
+    <!-- Specify the title for this web page that will appear in the browser title/tab area. -->
+    <title>OpenLayers 3 example: Loading a Bing Map</title>
+  </head>
+  
+  <body>
+  	<!-- Show some information to the user using basic HTML -->
+    <h2>Example: Loading a Bing Map Raster</h2>
+    
+    <!-- Specify a div tag area that will hold the map itself. -->
+    <div id="map" class="map"></div>
+    
+    <!-- Write the JavaScript code to build your map. -->
+    <script type="text/javascript">
+    	var projection = ol.proj.get('EPSG:3857');
+
+		var raster = new ol.layer.Tile({
+  			source: new ol.source.BingMaps({
+    			imagerySet: 'Aerial',
+    			key: 'Ak-dzM4wZjSqTlzveKz5u0d4IQ4bRzVI309GxmkgSVr1ewS6iPSrOvOKhA-CJlm3'
+  			})
+		});
+      
+      	//Declare the map object itself.
+      	var map = new ol.Map({
+        	target: 'map',
+        
+        	//Set up the layers that will be loaded in the map
+        	layers: [raster],
+        
+        	//Establish the view area. Note the reprojection from lat long (EPSG:4326) to Web Mercator (EPSG:3857)
+        	view: new ol.View({
+           		center: [876970.8463461736, 5859807.853963373],
+    			projection: projection,
+    			zoom: 10
+        	})
+      	});
+    </script>
+  </body>
+</html>
