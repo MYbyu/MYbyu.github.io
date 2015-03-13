@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.1">
+ <Document>
+  <name>KML Name</name>
+  <description>KML Description</description>
+  <Style id="style1">
+   <LineStyle>
+    <color>990000ff</color>
+    <width>4</width>
+   </LineStyle>
+   <PolyStyle>
+       <color>#250000f1</color>
+   </PolyStyle>
+  </Style>
+  <Placemark>
+   <name>City Wall</name>
+   <description>Jerusalem Old City</description>
+	<ExtendedData><SchemaData schemaUrl="#16events">
+		<SimpleData name="field_1">18</SimpleData>
+		<SimpleData name="Event">Jerusalem</SimpleData>
+		<SimpleData name="Location"></SimpleData>
+		<SimpleData name="Scripture"></SimpleData>
+		<SimpleData name="lat">N31 42 15.67 </SimpleData>
+		<SimpleData name="long">E35 12 27</SimpleData>
+		<SimpleData name="Website Link">http://en.wikipedia.org/wiki/Jerusalem</SimpleData>
+		<SimpleData name="Lat_decimal">31.704353</SimpleData>
+		<SimpleData name="Lon_decimal">35.2075</SimpleData>
+                <SimpleData name="Picture">images/jerusalem.jpg</SimpleData>
+	</SchemaData></ExtendedData>
+   <styleUrl>#style1</styleUrl>
+   <Polygon><outerBoundaryIs><LinearRing>
+    <altitudeMode>relative</altitudeMode>
+    <coordinates>
+35.2367,31.7837
+35.2326,31.7827
+35.2325,31.7826
+35.2314,31.7825
+35.2278,31.7796
+35.2274,31.7800
+35.2259,31.7792
+35.2260,31.7789
+35.2256,31.7784
+35.2259,31.7783
+35.2259,31.7781
+35.2271,31.7771
+35.2276,31.7766
+35.2275,31.7755
+35.2278,31.7754
+35.2277,31.7730
+35.2307,31.7729
+35.2323,31.7734
+35.2326,31.7739
+35.2342,31.7747
+35.2365,31.7751
+35.2376,31.7762
+35.2368,31.7830
+35.2367,31.7836
+35.2367,31.7837
+   </coordinates>
+</LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+ </Document>
+</kml>
