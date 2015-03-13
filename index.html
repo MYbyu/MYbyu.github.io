@@ -1,0 +1,244 @@
+<!-- This is a simple html page demonstrating adding a map to a page -->
+<!doctype html>
+<html lang="en">
+  <head>
+    
+    <!-- The style sheet here has some of the map styling for zooming buttons, etc. -->
+    <link rel="stylesheet" href="http://openlayers.org/en/v3.2.1/css/ol.css" type="text/css">
+    
+    <!-- This extra bit of style defines the size of the "map" div tag area that shows up later -->
+    <style>
+      .map {
+        height: 100%;
+        width: 100%;
+      }
+      .ol-popup {
+        position: absolute;
+        background-color: white;
+        -webkit-filter: drop-shadow(0 1px 4px rgba(0,0,0,0.2));
+        filter: drop-shadow(0 1px 4px rgba(0,0,0,0.2));
+        padding: 15px;
+        border-radius: 10px;
+        border: 1px solid #cccccc;
+        bottom: 12px;
+        left: -50px;
+      }
+      .ol-popup:after, .ol-popup:before {
+        top: 100%;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+      }
+      .ol-popup:after {
+        border-top-color: white;
+        border-width: 10px;
+        left: 48px;
+        margin-left: -10px;
+      }
+      .ol-popup:before {
+        border-top-color: #cccccc;
+        border-width: 11px;
+        left: 48px;
+        margin-left: -11px;
+      }
+      .ol-popup-closer {
+        text-decoration: none;
+        position: absolute;
+        top: 2px;
+        right: 8px;
+      }
+      .ol-popup-closer:after {
+        content: "x";
+      }
+      .popup-content {
+          width: "200px";
+      }
+    </style>
+    
+    <!-- Here we link to the copy of the OpenLayers JavaScript source file that is on the openlayers.org site. -->
+    <script src="http://openlayers.org/en/v3.2.1/build/ol.js" type="text/javascript"></script>
+    
+    <!-- Specify the title for this web page that will appear in the browser title/tab area. -->
+    <title>Mapping the Life of Jesus</title>
+  </head>
+  
+  <body>
+    <h2>Mapping the Life of Jesus</h2>
+
+<form>
+
+<select onchange="dropdown_clicked(this.value);">
+<option value>Select an event...</option>
+<option value='1'>Birth of Jesus</option>
+<option value='2'>Jesus grows up</option>
+<option value='8'>Teaches at the Temple</option>
+<option value='3'>Jesus is Baptized</option>
+<option value='4'>Turns Water into Wine</option> 
+<option value='5'>Sermon on the Mount</option>
+<option value='10'>Heal the Lepers</option>
+<option value='9'>Woman at Well</option> 
+<option value='6'>Feed the 5000</option>
+<option value='7'>Walks on Water</option>
+<option value='12'>Jesus appears with Moses</option>
+<option value='11'>Raises Lazarus</option>
+<option value='13'>Last Supper</option>
+<option value='14'>Jesus Suffers at Garden of Gethsemane</option>
+<option value='15'>The Crucifixion</option>
+<option value='16'>The Resurrection</option>
+
+</select>
+
+<input type="button" value="Whole Map" onclick="zoomToLatLong(32.31, 35.30, 9);"></input>
+<input type="button" value="Go to Jerusalem" onclick="zoomToLatLong(31.7833, 35.2167, 12);"></input>
+<input type="button" value="Go to Galilee" onclick="zoomToLatLong(32.8333, 35.5833, 11);"></input>
+
+</form>
+
+
+    <!-- Specify a div tag area that will hold the map itself. -->
+    <div id="map" class="map">
+        <div id="popup" class="ol-popup">
+	   <a href="#" id="popup-closer" class="ol-popup-closer"></a>
+	<div id="popup-content"></div>
+    </div>
+    <a href="documentation.pdf">Documentation</a>
+    
+    <!-- Write the JavaScript code to build your map. -->
+    <script type="text/javascript">
+
+       /**
+        * Elements that make up the popup.
+          */
+     var container = document.getElementById('popup');
+     var content = document.getElementById('popup-content');
+     var closer = document.getElementById('popup-closer');
+
+
+
+    // Add a click handler to hide the popup.
+    // @return {boolean} Don't follow the href.
+    closer.onclick = function() {
+           overlay.setPosition(undefined);
+           closer.blur();
+           return false;
+    };
+             // Create an overlay to anchor the popup to the map.
+              var overlay = new ol.Overlay({
+                 element: container
+              });
+    	       
+               var projection = ol.proj.get('EPSG:3857');
+
+		var raster = new ol.layer.Tile({
+  			source: new ol.source.BingMaps({
+    			imagerySet: 'Aerial',
+    			key: 'Ak-dzM4wZjSqTlzveKz5u0d4IQ4bRzVI309GxmkgSVr1ewS6iPSrOvOKhA-CJlm3'
+  			})
+		});
+
+                //Here we open the KML file
+                var vector = new ol.layer.Vector({
+	  		source: new ol.source.KML({
+    			projection: projection,
+    			//normally this kml file would be sitting on your server
+    			url: '16events.txt'
+  			})	
+		});
+
+                //Here we open polygon KML file
+                var polygon = new ol.layer.Vector({
+	  		source: new ol.source.KML({
+    			projection: projection,
+    			url: 'jerusalem-polygon.txt'
+  			})	
+		});
+
+               var line = new ol.layer.Vector({
+	  		source: new ol.source.KML({
+    			projection: projection,
+    			url: 'jordan.txt'
+  			})	
+		});
+      
+      	//Declare the map object itself.
+      	var map = new ol.Map({
+        	target: 'map',
+        
+        	//Set up the layers that will be loaded in the map
+        	layers: [raster, polygon, line, vector],
+                overlays: [overlay],
+        
+        	//Establish the view area. Note the reprojection from lat long (EPSG:4326) to Web Mercator (EPSG:3857)
+        	view: new ol.View({
+           		center: ol.proj.transform([35.30, 32.31], 'EPSG:4326', 'EPSG:3857'),
+    			projection: projection,
+    			zoom: 9
+        	})
+      	});
+
+        map.on('click', function(evt) {
+               //Try to get a feature at the point of interest
+              //Try to get a feature at the point of interest
+  var feature = map.forEachFeatureAtPixel(evt.pixel,
+	  function(feature, layer) {
+		return feature;
+	  });
+	  
+  //if we found a feature then create and show the popup.
+  if (feature) {
+	
+	var coord = map.getCoordinateFromPixel(evt.pixel);
+	overlay.setPosition(coord);
+	                overlay.setPosition(coord);
+	                var displaycontent = getPopupContent(feature);
+	                content.innerHTML = displaycontent;
+                  }
+            });
+
+
+          function getPopupContent(feature) {
+                 var displaycontent = '<p><b>' + feature.get('Event') + '</b> ' + 
+                      feature.get('Scripture') + '</p>' + '<img width="200px" src="' + feature.get('Picture') + '" />' + 
+                      '<a href="' + feature.get('Website Link') + '" ' + ' target= "_blank">Website Link</a>';
+                     return (displaycontent);
+          }
+
+
+           function findFeatureIndex(ID) {
+               var myFeatures = vector.getSource().getFeatures();
+               for(var i = 0, len = myFeatures.length; i < len; ++i) { 
+                    if (myFeatures[i].get('field_1') == ID) {
+                        return i;
+                    } 
+               }
+           } 
+
+            function dropdown_clicked(ID) {
+	          var index = findFeatureIndex(ID)
+                  var myFeature = vector.getSource().getFeatures()[index];
+	          var geometry = myFeature.getGeometry();
+	          var myCoords =geometry.getCoordinates();
+	          var myView = map.getView();
+	          myView.setCenter(myCoords);
+                  if(ID == '3') {
+	              myView.setZoom(12);
+                  } else {
+                      myView.setZoom(15);
+                  }
+	          overlay.setPosition(myCoords);
+	         var displaycontent = getPopupContent(myFeature);
+	          content.innerHTML = displaycontent;
+        }
+
+       function zoomToLatLong(lat, long, zoomLevel) {
+             map.getView().setCenter(ol.proj.transform([long, lat], 'EPSG:4326', 'EPSG:3857'));
+             map.getView().setZoom(zoomLevel);
+             return false;
+       }
+          
+    </script>
+  </body>
+</html>
