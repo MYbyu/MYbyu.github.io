@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document id="root_doc">
+<Schema name="16events" id="16events">
+	<SimpleField name="field_1" type="int"></SimpleField>
+	<SimpleField name="Event" type="string"></SimpleField>
+	<SimpleField name="Location" type="string"></SimpleField>
+	<SimpleField name="Scripture" type="string"></SimpleField>
+        <SimpleField name="Picture" type="string"></SimpleField>
+	<SimpleField name="lat" type="string"></SimpleField>
+	<SimpleField name="long" type="string"></SimpleField>
+	<SimpleField name="Website Link" type="string"></SimpleField>
+	<SimpleField name="Image Location" type="string"></SimpleField>
+	<SimpleField name="Lat_decimal" type="float"></SimpleField>
+	<SimpleField name="Lon_decimal" type="float"></SimpleField>
+</Schema>
+<Style id="sheep">
+    <IconStyle>
+      <Icon><href>lamb-of-god32.png</href></Icon>
+      <scale>0.5</scale>
+    </IconStyle>
+</Style>
+<Folder><name>16events</name>
+  <Placemark>
+	<description>Mary gives birth to Jesus in Bethlehem</description>
+        <styleUrl>#sheep</styleUrl>
+	<ExtendedData><SchemaData schemaUrl="#16events">
+		<SimpleData name="field_1">1</SimpleData>
+		<SimpleData name="Event">Birth of Jesus</SimpleData>
+		<SimpleData name="Location">Bethlehem</SimpleData>
+		<SimpleData name="Scripture">Luke 2:2-21</SimpleData>
+                <SimpleData name="Picture">images/1birth.jpg</SimpleData>
+		<SimpleData name="lat">N31 42 15.67 </SimpleData>
+		<SimpleData name="long">E35 12 27</SimpleData>
+		<SimpleData name="Website Link">http://en.wikipedia.org/wiki/Nativity_of_Jesus</SimpleData>
+		<SimpleData name="Lat_decimal">31.704353</SimpleData>
+		<SimpleData name="Lon_decimal">35.2075</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>35.2075,31.704353</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<description>Jesus grew up with Joseph and Mary in Nazareth</description>
+        <styleUrl>#sheep</styleUrl>
+	<ExtendedData><SchemaData schemaUrl="#16events">
+		<SimpleData name="field_1">2</SimpleData>
+		<SimpleData name="Event">Jesus Grows Up</SimpleData>
+		<SimpleData name="Location">Nazareth</SimpleData>
+		<SimpleData name="Scripture">Luke 2:39-40</SimpleData>
+                <SimpleData name="Picture">images/2carpenter.jpg</SimpleData>
+		<SimpleData name="lat">32°42′07″N</SimpleData>
+		<SimpleData name="long">35°18′12″E</SimpleData>
+		<SimpleData name="Lat_decimal">32.701944</SimpleData>
+		<SimpleData name="Lon_decimal">35.303333</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>35.303333,32.701944</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<description>Jesus meets John the Baptist at the river. A voice appears saying &quot;This is my son, listen to him&quot; </description>
+        <styleUrl>#sheep</styleUrl>
+	<ExtendedData><SchemaData schemaUrl="#16events">
+		<SimpleData name="field_1">3</SimpleData>
+		<SimpleData name="Event">Jesus is Baptized</SimpleData>
+		<SimpleData name="Location">Jordan River</SimpleData>
+		<SimpleData name="Scripture">Matthew 3:13–17</SimpleData>
+                <SimpleData name="Picture">images/3baptism.jpg</SimpleData>
+		<SimpleData name="lat">31°50'13.0&quot;N</SimpleData>
+		<SimpleData name="long">35°32'50.0&quot;E</SimpleData>
+		<SimpleData name="Website Link">https://www.lds.org/bible-videos/videos/the-baptism-of-jesus?lang=eng</SimpleData>
+		<SimpleData name="Lat_decimal">31.836944</SimpleData>
+		<SimpleData name="Lon_decimal">35.547222</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>35.547222,31.836944</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<description>What Jesus did here in Cana of Galilee was the first of the signs through which he revealed his glory; and his disciples believed in him.</description>
+        <styleUrl>#sheep</styleUrl>
+	<ExtendedData><SchemaData schemaUrl="#16events">
+		<SimpleData name="field_1">4</SimpleData>
+		<SimpleData name="Event">Turns Water into Wine</SimpleData>
+		<SimpleData name="Location">Cana</SimpleData>
+		<SimpleData name="Scripture">John 2:1-12</SimpleData>
+                <SimpleData name="Picture">images/4watertowine.jpg</SimpleData>
+		<SimpleData name="lat">32°45′N</SimpleData>
+		<SimpleData name="long">35°21′E</SimpleData>
+		<SimpleData name="Website Link">http://en.wikipedia.org/wiki/Marriage_at_Cana</SimpleData>
+		<SimpleData name="Lat_decimal">32.75</SimpleData>
+		<SimpleData name="Lon_decimal">35.35</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>35.35,32.75</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<description>Jesus teaches on the mountain. He said that the poor, sad, hungry, merciful, pure in heart, and peacemakers are blessed</description>
+        <styleUrl>#sheep</styleUrl>
+	<ExtendedData><SchemaData schemaUrl="#16events">
+		<SimpleData name="field_1">5</SimpleData>
+		<SimpleData name="Event">Sermon on the Mount</SimpleData>
+		<SimpleData name="Scripture">Matthew 5-7</SimpleData>
+                <SimpleData name="Picture">images/5sermon.jpg</SimpleData>
+		<SimpleData name="lat">32°52′56.04″N</SimpleData>
+		<SimpleData name="long">35°33′18.61″E</SimpleData>
+		<SimpleData name="Website Link">https://www.lds.org/bible-videos/videos/sermon-on-the-mount-the-beatitudes?lang=eng</SimpleData>
+		<SimpleData name="Lat_decimal">32.882233</SimpleData>
+		<SimpleData name="Lon_decimal">35.555169</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>35.555169,32.882233</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<description>Jesus gave food to more than 5000 people from 7 breads and 2 fish</description>
+        <styleUrl>#sheep</styleUrl>
+	<ExtendedData><SchemaData schemaUrl="#16events">
+		<SimpleData name="field_1">6</SimpleData>
+		<SimpleData name="Event">Feeds the 5000</SimpleData>
+		<SimpleData name="Scripture">John6:1-14</SimpleData>
+                <SimpleData name="Picture">images/6feeds.jpg</SimpleData>
+		<SimpleData name="lat">32°52′20″N</SimpleData>
+		<SimpleData name="long">35°33′00″E</SimpleData>
+		<SimpleData name="Website Link">https://www.lds.org/bible-videos/videos/the-feeding-of-the-5000?lang=eng</SimpleData>
+		<SimpleData name="Lat_decimal">32.872222</SimpleData>
+		<SimpleData name="Lon_decimal">35.55</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>35.55,32.872222</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<description>The disciples saw Jesus approaching the boat, walking on the water</description>
+        <styleUrl>#sheep</styleUrl>
+	<ExtendedData><SchemaData schemaUrl="#16events">
+		<SimpleData name="field_1">7</SimpleData>
+		<SimpleData name="Event">Walks on Water</SimpleData>
+		<SimpleData name="Location">Sea of Galilee</SimpleData>
+		<SimpleData name="Scripture">John 6: 15-21</SimpleData>
+                <SimpleData name="Picture">images/7walkonwater.jpg</SimpleData>
+		<SimpleData name="lat">32.831393 N</SimpleData>
+		<SimpleData name="long">35.590734 E</SimpleData>
+		<SimpleData name="Website Link">https://www.lds.org/scriptures/nt/john/6.15-21</SimpleData>
+		<SimpleData name="Lat_decimal">32.831393</SimpleData>
+		<SimpleData name="Lon_decimal">35.590734</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>35.590734,32.831393</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<description>Young Jesus Teaches in the Temple. Mary and Joseph found Jesus after three days teaching in the temple. </description>
+        <styleUrl>#sheep</styleUrl>
+	<ExtendedData><SchemaData schemaUrl="#16events">
+		<SimpleData name="field_1">8</SimpleData>
+		<SimpleData name="Event">Teaches at the Temple</SimpleData>
+		<SimpleData name="Location">Jerusalem</SimpleData>
+		<SimpleData name="Scripture">Luke 2:40-52</SimpleData>
+                <SimpleData name="Picture">images/8temple.jpg</SimpleData>
+ 		<SimpleData name="lat">31°46'20.6&quot;N</SimpleData>
+		<SimpleData name="long">35°12'46.0&quot;E</SimpleData>
+		<SimpleData name="Website Link">https://www.lds.org/bible-videos/videos/young-jesus-teaches-in-the-temple?lang=eng</SimpleData>
+		<SimpleData name="Lat_decimal">31.772389</SimpleData>
+		<SimpleData name="Lon_decimal">35.212778</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>35.212778,31.772389</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<description>Jesus was leaving Jerusalem to go into Galilee and traveled through Samaria. He met a Samaritan woman at a well who gave him a drink. He gave a promise &quot;that would cause her never to thirst again&quot;. The water He could give her was the &quot;living water&quot; of eternal life.</description>
+        <styleUrl>#sheep</styleUrl>
+	<ExtendedData><SchemaData schemaUrl="#16events">
+		<SimpleData name="field_1">9</SimpleData>
+		<SimpleData name="Event">Woman at the Well</SimpleData>
+		<SimpleData name="Location">Sychar of Samaria</SimpleData>
+		<SimpleData name="Scripture">John 4:3-26</SimpleData>
+                <SimpleData name="Picture">images/9well.jpg</SimpleData>
+		<SimpleData name="lat">32°11'53.7&quot;N</SimpleData>
+		<SimpleData name="long">35°26'13.2&quot;E</SimpleData>
+		<SimpleData name="Website Link">https://www.lds.org/scriptures/nt/john/4?lang=eng</SimpleData>
+		<SimpleData name="Lat_decimal">32.19825</SimpleData>
+		<SimpleData name="Lon_decimal">35.437</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>35.437,32.19825</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<description>Jesus healed 10 lepers after they lifted up their voices saying &quot;Master, have mercy on us&quot;. Only one of the ten returned to thank Jesus. Jesus told him &quot;thy faith hath made thee whole&quot;.</description>
+        <styleUrl>#sheep</styleUrl>
+	<ExtendedData><SchemaData schemaUrl="#16events">
+		<SimpleData name="field_1">10</SimpleData>
+		<SimpleData name="Event">Heals the 10 Lepers</SimpleData>
+		<SimpleData name="Location">Between Samaria and Galilee</SimpleData>
+		<SimpleData name="Scripture">Luke 17:12-19</SimpleData>
+                <SimpleData name="Picture">images/10lepers.jpg</SimpleData>
+		<SimpleData name="lat">32°24'43.5&quot;N</SimpleData>
+		<SimpleData name="long">35°26'49.4&quot;E</SimpleData>
+		<SimpleData name="Website Link">https://www.lds.org/scriptures/nt/luke/17.12-19?lang=eng#11</SimpleData>
+		<SimpleData name="Lat_decimal">32.412083</SimpleData>
+		<SimpleData name="Lon_decimal">35.447056</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>35.447056,32.412083</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<description>Lazarus was very sick while Jesus was teaching in another city. Jesus was sent a message about Lazarus but he was dead for four days before Jesus came. He brought Lazarus back to life.</description>
+        <styleUrl>#sheep</styleUrl>
+	<ExtendedData><SchemaData schemaUrl="#16events">
+		<SimpleData name="field_1">11</SimpleData>
+		<SimpleData name="Event">Raises Lazarus from the Dead</SimpleData>
+		<SimpleData name="Location">Bethany</SimpleData>
+		<SimpleData name="Scripture">John 11:1-46</SimpleData>
+                <SimpleData name="Picture">images/11lazarus.jpg</SimpleData>
+		<SimpleData name="lat">31°50'10.4&quot;N </SimpleData>
+		<SimpleData name="long">35°33'01.5&quot;E</SimpleData>
+		<SimpleData name="Website Link">https://www.lds.org/bible-videos/videos/lazarus-is-raised-from-the-dead?lang=eng</SimpleData>
+		<SimpleData name="Lat_decimal"> 31.751584 </SimpleData>
+		<SimpleData name="Lon_decimal"> 35.267475 </SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>35.267475,31.751584 </coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<description>Jesus took Peter, James and John high up an mountain. Jesus was transfigureed before them. Moses and Elias appeared and spoke with them. God presented Jesus saying &quot;This is my beloved Son, in whom I am well pleased; hear ye him.&quot;</description>
+        <styleUrl>#sheep</styleUrl>
+	<ExtendedData><SchemaData schemaUrl="#16events">
+		<SimpleData name="field_1">12</SimpleData>
+		<SimpleData name="Event">Jesus appears with Moses</SimpleData>
+		<SimpleData name="Location">Mount Tabor</SimpleData>
+		<SimpleData name="Scripture">Matthew 17:1-13</SimpleData>
+                <SimpleData name="Picture">images/12transfiguration.jpg</SimpleData>
+		<SimpleData name="lat">32°41'16.1&quot;N</SimpleData>
+		<SimpleData name="long">35°23'28.2&quot;E</SimpleData>
+		<SimpleData name="Website Link">https://www.lds.org/scriptures/nt/matt/17?lang=eng</SimpleData>
+		<SimpleData name="Lat_decimal">32.687806</SimpleData>
+		<SimpleData name="Lon_decimal">35.391167</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>35.391167,32.687806</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<description>Before Jesus was arrested and crucified, He gathered his Twelve Apostles and ate a meal during Passover. He blessed bread and wine and gave it to the Apostles. Jesus washed the feet of the Apostles.</description>
+        <styleUrl>#sheep</styleUrl>
+	<ExtendedData><SchemaData schemaUrl="#16events">
+		<SimpleData name="field_1">13</SimpleData>
+		<SimpleData name="Event">The Last Supper</SimpleData>
+		<SimpleData name="Location">Jerusalem</SimpleData>
+		<SimpleData name="Scripture">Luke 22:7-20</SimpleData>
+                <SimpleData name="Picture">images/13lastsupper.jpg</SimpleData>
+		<SimpleData name="lat">31°46'17.8&quot;N</SimpleData>
+		<SimpleData name="long">35°13'45.2&quot;E</SimpleData>
+		<SimpleData name="Website Link">https://www.lds.org/bible-videos/videos/the-last-supper?lang=eng</SimpleData>
+		<SimpleData name="Lat_decimal">31.771611</SimpleData>
+		<SimpleData name="Lon_decimal">35.229222</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>35.229222,31.771611</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<description>Jesus and His Apostles went to the Garden of Gethemane. He asked Peter, James and John to go with HIm into the garden and to pray while they waited. Here is where Jesus suffered for the sins of all people. He began to tremble because of the pain. An angel came to strengthen Him. He suffered so much that he sweat drops of blood.</description>
+        <styleUrl>#sheep</styleUrl>
+	<ExtendedData><SchemaData schemaUrl="#16events">
+		<SimpleData name="field_1">14</SimpleData>
+		<SimpleData name="Event">Jesus Suffers in the Garden of Gethsemane</SimpleData>
+		<SimpleData name="Location">Garden of Getsemane</SimpleData>
+		<SimpleData name="Scripture">Mathew 26:36-57</SimpleData>
+                <SimpleData name="Picture">images/14suffering.jpg</SimpleData>
+		<SimpleData name="lat">31°46'45.3&quot;N</SimpleData>
+		<SimpleData name="long">35°14'22.6&quot;E</SimpleData>
+		<SimpleData name="Website Link">https://www.lds.org/bible-videos/videos/the-savior-suffers-in-gethsemane?lang=eng</SimpleData>
+		<SimpleData name="Lat_decimal">31.77925</SimpleData>
+		<SimpleData name="Lon_decimal">35.239611</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>35.239611,31.77925</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<description>Jesus was arrested by the soldiers of King Herod. He was whipped and spat on while wearing a crown of thorns, &quot;King of the Jews&quot;. He was taken to Golgatha and had to carry His cross across his back. They nailed His hands and feet to the cross and lifted it up.</description>
+        <styleUrl>#sheep</styleUrl>
+	<ExtendedData><SchemaData schemaUrl="#16events">
+		<SimpleData name="field_1">15</SimpleData>
+		<SimpleData name="Event">The Crucifixion</SimpleData>
+		<SimpleData name="Location">Golgotha</SimpleData>
+		<SimpleData name="Scripture">Luke 23:26-56</SimpleData>
+                <SimpleData name="Picture">images/15crucifixion.jpg</SimpleData>
+		<SimpleData name="lat">31°47'23.8&quot;N</SimpleData>
+		<SimpleData name="long">35°14'56.6&quot;E</SimpleData>
+		<SimpleData name="Website Link">https://www.lds.org/bible-videos/videos/jesus-is-scourged-and-crucified?lang=eng</SimpleData>
+		<SimpleData name="Lat_decimal">31.789944</SimpleData>
+		<SimpleData name="Lon_decimal">35.249056</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>35.249056,31.789944</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<description>Jesus was wrapped in cloth and placed in a tomb. A big rock was rolled in front of the tomb. Jesus was resurrected after three days in the tomb</description>
+        <styleUrl>#sheep</styleUrl>
+	<ExtendedData><SchemaData schemaUrl="#16events">
+		<SimpleData name="field_1">16</SimpleData>
+		<SimpleData name="Event">The Resurrection</SimpleData>
+		<SimpleData name="Location">Tomb</SimpleData>
+		<SimpleData name="Scripture">John 20:1-18</SimpleData>
+                <SimpleData name="Picture">images/16burial.jpg</SimpleData>
+		<SimpleData name="lat">31°47'01.6&quot;N</SimpleData>
+		<SimpleData name="long">35°13'46.9&quot;E</SimpleData>
+		<SimpleData name="Website Link">https://www.lds.org/bible-videos/videos/jesus-is-laid-in-a-tomb?lang=eng</SimpleData>
+		<SimpleData name="Lat_decimal">31.783778</SimpleData>
+		<SimpleData name="Lon_decimal">35.229694</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>35.229694,31.783778</coordinates></Point>
+  </Placemark>
+</Folder>
+</Document></kml>
